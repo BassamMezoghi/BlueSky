@@ -4309,6 +4309,8 @@ String ls_file_nm,ls_path
 
 GetFileSaveName(" حـــفظ", ls_path, ls_file_nm, "xls", "Excel Files (*.xls),*.xls" ,"C:\", 32770)
 
+uo.dw_report.SaveAs(ls_path , Excel8! , True)
+
 //li_ret = uf_save_dw_as_excel(uo.dw_report, ls_path)
 //if li_ret = 1 then
 //   //success
