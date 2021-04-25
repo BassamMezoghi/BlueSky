@@ -1,0 +1,13 @@
+﻿$PBExportHeader$d_all_customer.srd
+release 8;
+datawindow(units=0 timer_interval=0 color=67108864 processing=0 HTMLDW=no print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 96 print.margin.bottom = 96 print.paper.source = 0 print.paper.size = 0 print.prompt=no print.buttons=no print.preview.buttons=no )
+summary(height=0 color="536870912" )
+footer(height=0 color="536870912" )
+detail(height=88 color="536870912" )
+table(column=(type=long update=yes updatewhereclause=yes key=yes identity=yes name=customer_id dbname="CUSTOMER.CUSTOMER_ID" )
+ column=(type=char(1) update=yes updatewhereclause=yes name=active_fg dbname="CUSTOMER.ACTIVE_FG" )
+ retrieve="PBSELECT( VERSION(400) TABLE(NAME=~"CUSTOMER~" ) COLUMN(NAME=~"CUSTOMER.CUSTOMER_ID~") COLUMN(NAME=~"CUSTOMER.ACTIVE_FG~")WHERE(    EXP1 =~"CUSTOMER.ACTIVE_FG~"   OP =~"=~"    EXP2 =~"'Y'~"    LOGIC =~"and~" ) WHERE(    EXP1 =~"CUSTOMER.KIND~"   OP =~"=~"    EXP2 =~"'M'~" ) ) " update="CUSTOMER" updatewhere=1 updatekeyinplace=no )
+column(band=detail id=1 alignment="1" tabsequence=10 border="5" color="33554432" x="14" y="4" height="76" width="1902" format="[general]" html.valueishtml="0"  name=customer_id visible="1" righttoleft=1 edit.name="dddw_custome" dddw.name=dddw_customer_m_kind dddw.displaycolumn=customer_nm dddw.datacolumn=customer_id dddw.percentwidth=100 dddw.lines=0 dddw.limit=0 dddw.allowedit=no dddw.useasborder=yes dddw.case=any dddw.imemode=0 dddw.hscrollbar=yes dddw.vscrollbar=yes  font.face="Arial (Arabic)" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="178" background.mode="2" background.color="16777215" )
+text(band=detail alignment="0" text=": إسم صاحب المحل" border="0" color="33554432" x="1934" y="8" height="72" width="466" html.valueishtml="0"  name=t_1 visible="1"  font.face="Arial (Arabic)" font.height="-11" font.weight="700"  font.family="2" font.pitch="2" font.charset="178" background.mode="2" background.color="67108864" )
+htmltable(border="1" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" netscapelayers="0" )

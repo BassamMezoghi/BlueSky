@@ -1,0 +1,506 @@
+﻿$PBExportHeader$m_access_tree.srm
+forward
+global type m_access_tree from menu
+end type
+type m_اضافة from menu within m_access_tree
+end type
+type m_0 from menu within m_access_tree
+end type
+type m_اضافةداخلية from menu within m_access_tree
+end type
+type m_1 from menu within m_access_tree
+end type
+type m_الغاء from menu within m_access_tree
+end type
+type m_2 from menu within m_access_tree
+end type
+type m_تعديل from menu within m_access_tree
+end type
+type m_3 from menu within m_access_tree
+end type
+type m_اللغة from menu within m_access_tree
+end type
+global type m_access_tree from menu
+m_اضافة m_اضافة
+m_0 m_0
+m_اضافةداخلية m_اضافةداخلية
+m_1 m_1
+m_الغاء m_الغاء
+m_2 m_2
+m_تعديل m_تعديل
+m_3 m_3
+m_اللغة m_اللغة
+end type
+end forward
+
+global type m_access_tree from menu
+m_اضافة m_اضافة
+m_0 m_0
+m_اضافةداخلية m_اضافةداخلية
+m_1 m_1
+m_الغاء m_الغاء
+m_2 m_2
+m_تعديل m_تعديل
+m_3 m_3
+m_اللغة m_اللغة
+end type
+global m_access_tree m_access_tree
+
+on m_access_tree.create
+m_access_tree=this
+call super::create
+this.text = "m_access_tree"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = -12
+this.weight = 700
+this.fontcharset = ansi!
+this.facename = "Arial"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_اضافة=create m_اضافة
+this.m_0=create m_0
+this.m_اضافةداخلية=create m_اضافةداخلية
+this.m_1=create m_1
+this.m_الغاء=create m_الغاء
+this.m_2=create m_2
+this.m_تعديل=create m_تعديل
+this.m_3=create m_3
+this.m_اللغة=create m_اللغة
+this.Item[UpperBound(this.Item)+1]=this.m_اضافة
+this.Item[UpperBound(this.Item)+1]=this.m_0
+this.Item[UpperBound(this.Item)+1]=this.m_اضافةداخلية
+this.Item[UpperBound(this.Item)+1]=this.m_1
+this.Item[UpperBound(this.Item)+1]=this.m_الغاء
+this.Item[UpperBound(this.Item)+1]=this.m_2
+this.Item[UpperBound(this.Item)+1]=this.m_تعديل
+this.Item[UpperBound(this.Item)+1]=this.m_3
+this.Item[UpperBound(this.Item)+1]=this.m_اللغة
+end on
+
+on m_access_tree.destroy
+call super::destroy
+destroy(this.m_اضافة)
+destroy(this.m_0)
+destroy(this.m_اضافةداخلية)
+destroy(this.m_1)
+destroy(this.m_الغاء)
+destroy(this.m_2)
+destroy(this.m_تعديل)
+destroy(this.m_3)
+destroy(this.m_اللغة)
+end on
+
+type m_اضافة from menu within m_access_tree
+end type
+
+on m_اضافة.create
+call super::create
+this.text = "اضافة"
+this.menuimage = "RunToCursor!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = -12
+this.weight = 700
+this.facename = "Arial"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_اضافة.destroy
+call super::destroy
+end on
+
+event clicked;long ll_tvi, ll_tvparent
+str_stack lstr_stack
+treeviewitem  l_tvi
+tp_user_info page
+tp_app_parts parts
+Long ll_idx
+
+ll_idx = w_menu.uo_tabcontrol.of_getselectedtab()
+
+page = w_menu.uo_tabcontrol.ist_tabs[ll_idx].ado_object
+ll_idx = page.uo_tabcontrol.of_getselectedtab()
+parts = page.uo_tabcontrol.ist_tabs[ll_idx].ado_object
+
+ll_tvi = parts.tv_tree.FindItem(currenttreeitem! , 0)
+
+ll_tvparent = parts.tv_tree.FindItem(parenttreeitem!,ll_tvi)
+
+parts.tv_tree.GetItem(ll_tvi , l_tvi)
+
+lstr_stack = l_tvi.data
+lstr_stack.as_data = "-1"
+
+l_tvi.data = lstr_stack
+l_tvi.label = ""
+
+ll_tvi = parts.tv_tree.InsertItem(ll_tvparent,ll_tvi, l_tvi)
+
+parts.tv_tree.EditLabels = TRUE
+parts.tv_tree.EditLabel(ll_tvi)
+
+end event
+
+type m_0 from menu within m_access_tree
+end type
+
+on m_0.create
+call super::create
+this.text = "-"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = -12
+this.weight = 700
+this.facename = "Arial"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_0.destroy
+call super::destroy
+end on
+
+type m_اضافةداخلية from menu within m_access_tree
+end type
+
+event clicked;long ll_tvi, ll_tvparent
+str_stack lstr_stack
+treeviewitem  l_tvi
+tp_user_info page
+tp_app_parts parts
+Long ll_idx
+
+ll_idx = w_menu.uo_tabcontrol.of_getselectedtab()
+
+page = w_menu.uo_tabcontrol.ist_tabs[ll_idx].ado_object
+ll_idx = page.uo_tabcontrol.of_getselectedtab()
+parts = page.uo_tabcontrol.ist_tabs[ll_idx].ado_object
+
+ll_tvi = parts.tv_tree.FindItem(currenttreeitem! , 0)
+
+parts.tv_tree.GetItem(ll_tvi , l_tvi)
+
+lstr_stack = l_tvi.data
+lstr_stack.as_parent = lstr_stack.as_data
+lstr_stack.as_data = "-1"
+l_tvi.data = lstr_stack
+l_tvi.label = ""
+
+ll_tvi = parts.tv_tree.InsertItemfirst(ll_tvi, l_tvi)
+
+parts.tv_tree.CollapseItem( ll_tvi ) 
+parts.tv_tree.SelectItem( ll_tvi ) 
+
+parts.tv_tree.EditLabels = TRUE
+parts.tv_tree.EditLabel(ll_tvi)
+end event
+
+on m_اضافةداخلية.create
+call super::create
+this.text = "اضافة داخلية"
+this.menuimage = "Insert5!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = -12
+this.weight = 700
+this.facename = "Arial"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_اضافةداخلية.destroy
+call super::destroy
+end on
+
+type m_1 from menu within m_access_tree
+end type
+
+on m_1.create
+call super::create
+this.text = "-"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = -12
+this.weight = 700
+this.facename = "Arial"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_1.destroy
+call super::destroy
+end on
+
+type m_الغاء from menu within m_access_tree
+end type
+
+on m_الغاء.create
+call super::create
+this.text = "الغاء"
+this.menuimage = "DeleteRow!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = -12
+this.weight = 700
+this.facename = "Arial"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_الغاء.destroy
+call super::destroy
+end on
+
+event clicked;long ll_tvi, ll_id
+str_stack lstr_stack
+treeviewitem  l_tvi
+tp_user_info page
+tp_app_parts parts
+Long ll_idx
+
+ll_idx = w_menu.uo_tabcontrol.of_getselectedtab()
+
+page = w_menu.uo_tabcontrol.ist_tabs[ll_idx].ado_object
+ll_idx = page.uo_tabcontrol.of_getselectedtab()
+parts = page.uo_tabcontrol.ist_tabs[ll_idx].ado_object
+
+ll_tvi = parts.tv_tree.FindItem(currenttreeitem! , 0)
+
+parts.tv_tree.GetItem(ll_tvi , l_tvi)
+
+lstr_stack = l_tvi.data
+ll_id = Long(lstr_stack.as_parent )
+
+IF Long(lstr_stack.as_data ) = -1 THEN
+	parts.tv_tree.DeleteItem(ll_tvi)
+	return 
+END IF
+
+if(ll_id = -100)Then
+
+	MessageBox("تنبيه", "لايمكن الغاء الاصول")
+	return 
+else
+	if(MessageBox("تنبيه","هل انت متاكد من الغاء  "+l_tvi.label+"?~n~nسيتم الغاء جميع البنود المسجلة تحت هذا البند.",information!,yesno!)	= 2)Then return
+end if
+
+ll_id = Long(lstr_stack.as_data )
+
+IF sqlca.sqlcode = 0 THEN
+
+	parts.tv_tree.DeleteItem(ll_tvi)
+	
+END IF
+end event
+
+type m_2 from menu within m_access_tree
+end type
+
+on m_2.create
+call super::create
+this.text = "-"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = -12
+this.weight = 700
+this.facename = "Arial"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_2.destroy
+call super::destroy
+end on
+
+type m_تعديل from menu within m_access_tree
+end type
+
+event clicked;Long ll_tvi
+tp_user_info page
+tp_app_parts parts
+Long ll_idx
+
+ll_idx = w_menu.uo_tabcontrol.of_getselectedtab()
+
+page = w_menu.uo_tabcontrol.ist_tabs[ll_idx].ado_object
+ll_idx = page.uo_tabcontrol.of_getselectedtab()
+parts = page.uo_tabcontrol.ist_tabs[ll_idx].ado_object
+
+ll_tvi = parts.tv_tree.FindItem(currenttreeitem! , 0)
+
+parts.tv_tree.EditLabels = TRUE
+parts.tv_tree.EditLabel(ll_tvi)
+end event
+
+on m_تعديل.create
+call super::create
+this.text = "تعديل"
+this.menuimage = "NestedReport!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = -12
+this.weight = 700
+this.facename = "Arial"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_تعديل.destroy
+call super::destroy
+end on
+
+type m_3 from menu within m_access_tree
+end type
+
+on m_3.create
+call super::create
+this.text = "-"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = -12
+this.weight = 700
+this.facename = "Arial"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_3.destroy
+call super::destroy
+end on
+
+type m_اللغة from menu within m_access_tree
+end type
+
+event clicked;long ll_tvi, ll_id
+str_stack lstr_stack
+treeviewitem  l_tvi
+tp_user_info page
+tp_app_parts parts
+Long ll_idx
+
+ll_idx = w_menu.uo_tabcontrol.of_getselectedtab()
+
+page = w_menu.uo_tabcontrol.ist_tabs[ll_idx].ado_object
+ll_idx = page.uo_tabcontrol.of_getselectedtab()
+parts = page.uo_tabcontrol.ist_tabs[ll_idx].ado_object
+
+ll_tvi = parts.tv_tree.FindItem(currenttreeitem! , 0)
+
+parts.tv_tree.GetItem(ll_tvi , l_tvi)
+
+lstr_stack = l_tvi.data
+
+OpenWithParm(w_menu_lan , lstr_stack.as_data)
+
+
+end event
+
+on m_اللغة.create
+call super::create
+this.text = "اللغة"
+this.menuimage = "Watcom!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = -12
+this.weight = 700
+this.facename = "Arial"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_اللغة.destroy
+call super::destroy
+end on
+

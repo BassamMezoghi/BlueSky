@@ -1,0 +1,11 @@
+﻿$PBExportHeader$notifyicondata.srs
+global type notifyicondata from structure
+	long		cbsize
+	long		hwnd
+	long		uid
+	long		uflags
+	long		ucallbackmessage
+	long		hicon
+	character		sztip[64]
+end type
+

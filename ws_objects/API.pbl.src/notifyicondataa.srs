@@ -1,0 +1,17 @@
+﻿$PBExportHeader$notifyicondataa.srs
+global type notifyicondataa from structure
+	unsignedlong		cbsize
+	unsignedlong		hwnd
+	unsignedinteger		uid
+	unsignedinteger		uflags
+	unsignedinteger		ucallbackmessage
+	unsignedlong		hicon
+	character		sztip[128]
+	unsignedlong		dwstate
+	unsignedlong		dwstatemask
+	character		szinfo[256]
+	unsignedinteger		utimeout
+	character		szinfotitle[64]
+	unsignedlong		dwinfoflags
+end type
+

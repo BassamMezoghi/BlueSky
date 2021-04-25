@@ -1,0 +1,7 @@
+﻿$PBExportHeader$security_attributes.srs
+global type SECURITY_ATTRIBUTES from structure
+	ulong		nLength
+	ulong		lpSecurityDescriptor
+	boolean		bInheritHandle
+end type
+

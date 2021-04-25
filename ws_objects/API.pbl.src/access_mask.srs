@@ -1,0 +1,12 @@
+﻿$PBExportHeader$access_mask.srs
+global type ACCESS_MASK from structure
+	long		SpecificRights
+	character		StandardRights
+	character		AccessSystemAcl
+	character		Reserved[3]
+	character		GenericAll
+	character		GenericExecute
+	character		GenericWrite
+	character		GenericRead
+end type
+

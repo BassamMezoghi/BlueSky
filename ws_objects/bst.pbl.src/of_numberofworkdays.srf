@@ -1,0 +1,44 @@
+﻿$PBExportHeader$of_numberofworkdays.srf
+global type of_numberofworkdays from function_object
+end type
+
+forward prototypes
+global function long of_numberofworkdays (datetime start_dt, datetime end_dt, string as_holidays)
+end prototypes
+
+global function long of_numberofworkdays (datetime start_dt, datetime end_dt, string as_holidays);Int li_workdays = 0
+Int li_HolidaysCount ,li_itr
+Boolean lb_Countable 
+Date ld_Start , ld_End
+str_pass_parmeters lstr_parm
+
+ld_Start = Date(Start_dt)
+ld_End 	= Date(End_dt)
+
+IF ld_Start > ld_end THEN Return -1
+
+lstr_parm = gnv_services.of_split( as_holidays , "," )
+
+li_HolidaysCount = UpperBound(lstr_parm.string_parm)
+
+DO WHILE ld_Start <= ld_End
+
+	lb_Countable = True
+	FOR li_itr = 1 To li_HolidaysCount
+		
+		IF Long(lstr_parm.string_parm[li_itr]) = DayNumber(ld_start) THEN
+			lb_Countable = False
+			Exit
+		END IF
+		
+	NEXT
+	
+	IF lb_Countable THEN li_workdays++
+	
+	ld_start = RelativeDate (ld_start , 1)
+
+LOOP
+
+Return li_workdays
+end function
+

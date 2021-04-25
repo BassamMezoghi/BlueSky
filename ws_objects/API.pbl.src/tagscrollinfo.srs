@@ -1,0 +1,11 @@
+﻿$PBExportHeader$tagscrollinfo.srs
+global type tagSCROLLINFO from structure
+	uint		cbSize
+	uint		fMask
+	integer		nMin
+	integer		nMax
+	uint		nPage
+	integer		nPos
+	integer		nTrackPos
+end type
+

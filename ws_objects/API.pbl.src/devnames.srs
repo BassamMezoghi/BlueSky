@@ -1,0 +1,8 @@
+﻿$PBExportHeader$devnames.srs
+global type devnames from structure
+	unsignedinteger		wDriverOffset
+	unsignedinteger		wDeviceOffset
+	unsignedinteger		wOutputOffset
+	unsignedinteger		wDefault
+end type
+

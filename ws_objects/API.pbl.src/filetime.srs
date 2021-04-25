@@ -1,0 +1,6 @@
+﻿$PBExportHeader$filetime.srs
+global type FILETIME from structure
+	ulong		dwLowDateTime
+	ulong		dwHighDateTime
+end type
+

@@ -1,0 +1,22 @@
+﻿$PBExportHeader$startupinfoa.srs
+global type STARTUPINFOA from structure
+	ulong		cb
+	string		lpReserved
+	string		lpDesktop
+	string		lpTitle
+	ulong		dwX
+	ulong		dwY
+	ulong		dwXSize
+	ulong		dwYSize
+	ulong		dwXCountChars
+	ulong		dwYCountChars
+	ulong		dwFillAttribute
+	ulong		dwFlags
+	long		wShowWindow
+	long		cbReserved2
+	ulong		lpReserved2
+	ulong		hStdInput
+	ulong		hStdOutput
+	ulong		hStdError
+end type
+

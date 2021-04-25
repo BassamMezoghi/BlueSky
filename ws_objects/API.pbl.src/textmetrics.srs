@@ -1,0 +1,24 @@
+﻿$PBExportHeader$textmetrics.srs
+global type textmetrics from structure
+	long		tmheight
+	long		tmascent
+	long		tmdescent
+	long		tminternalleading
+	long		tmexternalleading
+	long		tmavecharwidth
+	long		tmmaxcharwidth
+	long		tmweight
+	long		tmoverhang
+	long		tmdigitizedaspectx
+	long		tmdgitizedaspecty
+	character		tmfirstchar
+	character		tmlastchar
+	character		tmdefaultchar
+	character		tmbreakchar
+	character		tmitalic
+	character		tmunderlined
+	character		tmstruckout
+	character		tmpitchandfamily
+	character		tmcharset
+end type
+

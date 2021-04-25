@@ -1,0 +1,9 @@
+﻿$PBExportHeader$flashwinfo.srs
+global type FLASHWINFO from structure
+	uint		cbSize
+	ulong		hWnd
+	ulong		dwFlags
+	uint		uCount
+	ulong		dwTimeout
+end type
+

@@ -1,0 +1,15 @@
+﻿$PBExportHeader$menuiteminfoa.srs
+global type MENUITEMINFOA from structure
+	uint		cbSize
+	uint		fMask
+	uint		fType
+	uint		fState
+	uint		wID
+	ulong		hSubMenu
+	ulong		hbmpChecked
+	ulong		hbmpUnchecked
+	ulong		dwItemData
+	ulong		dwTypeData
+	uint		cch
+end type
+

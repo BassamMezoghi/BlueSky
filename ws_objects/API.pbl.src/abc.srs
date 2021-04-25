@@ -1,0 +1,7 @@
+﻿$PBExportHeader$abc.srs
+global type abc from structure
+	integer		a
+	unsignedinteger	b
+	integer		c
+end type
+

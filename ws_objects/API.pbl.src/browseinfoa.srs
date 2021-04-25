@@ -1,0 +1,12 @@
+﻿$PBExportHeader$browseinfoa.srs
+global type BROWSEINFOA from structure
+	ulong		hwndOwner
+	ulong		pidlRoot
+	string		pszDisplayName
+	string		lpszTitle
+	uint		ulFlags
+	ulong		lpfn
+	ulong		lParam
+	int		iImage
+end type
+

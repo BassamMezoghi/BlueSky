@@ -1,0 +1,7 @@
+﻿$PBExportHeader$str_filter_report.srs
+global type str_filter_report from structure
+	string		type_fg
+	string		type_txt
+	string		column_nm
+end type
+

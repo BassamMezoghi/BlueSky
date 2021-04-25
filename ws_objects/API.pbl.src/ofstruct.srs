@@ -1,0 +1,10 @@
+﻿$PBExportHeader$ofstruct.srs
+global type ofstruct from structure
+	character		cbytes
+	character		ffixeddisk
+	long		nerrcode
+	long		reserved1
+	long		reserved2
+	character		szpathname[128]
+end type
+

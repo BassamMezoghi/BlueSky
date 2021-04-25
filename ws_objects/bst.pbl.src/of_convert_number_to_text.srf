@@ -1,0 +1,23 @@
+﻿$PBExportHeader$of_convert_number_to_text.srf
+global type of_convert_number_to_text from function_object
+end type
+
+forward prototypes
+global function string of_convert_number_to_text (long no)
+end prototypes
+
+global function string of_convert_number_to_text (long no);String ls_total_in_letter
+Decimal ld_total_
+
+ld_total_ = Dec(no)
+
+IF ld_total_ <= 0 or IsNull(ld_total_) THEN Return "" 
+
+//IF gstr_user_info.Maincurrency = "" THEN
+	ls_total_in_letter =  gnv_services.pre_convert(ld_total_," سهم ","",3)
+//ELSE
+//	ls_total_in_letter = gnv_services.pre_convert(ld_total_,Mid(gstr_user_info.Maincurrency , 1 , POS(gstr_user_info.Maincurrency , ",") - 1 ) , Mid(gstr_user_info.Maincurrency , POS(gstr_user_info.Maincurrency , ",") + 1 , len(gstr_user_info.Maincurrency) ) ,3)
+//END IF
+return ls_total_in_letter
+end function
+

@@ -1,0 +1,8 @@
+﻿$PBExportHeader$str_order_details.srs
+global type str_order_details from structure
+	Long		sc_id
+	decimal		other_price
+	long		qty
+	long		order_id
+end type
+

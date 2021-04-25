@@ -1,0 +1,14 @@
+﻿$PBExportHeader$panose.srs
+global type panose from structure
+	character	 bFamilyType 
+	character	 bSerifStyle 
+	character	 bWeight 
+	character	 bProportion 
+	character	 bContrast 
+	character	 bStrokeVariation 
+	character	 bArmStyle 
+	character	 bLetterform 
+	character	 bMidline 
+	character	 bXHeight 
+end type
+

@@ -1,0 +1,37 @@
+﻿$PBExportHeader$devicemode.srs
+global type devicemode from structure
+	character	dmDeviceName[32]
+	unsignedinteger	dmSpecVersion
+	unsignedinteger	dmDriverVersion
+	unsignedinteger	dmSize
+	unsignedinteger	dmDriverExtra
+	unsignedlong	dmFields
+	integer	dmOrientation
+	integer	dmPaperSize
+	integer	dmPaperLength
+	integer	dmPaperWidth
+	unsignedlong	dmPosition
+	integer	dmScale
+	integer	dmCopies
+	integer	dmDefaultSource
+	integer	dmPrintQuality
+	integer	dmColor
+	integer	dmDuplex
+	integer	dmYResolution
+	integer	dmTTOption
+	integer	dmCollate
+	character	dmFormName[32]
+	unsignedinteger	dmLogPixels
+	unsignedlong	dmBitsPerPel
+	unsignedlong	dmPelsWidth
+	unsignedlong	dmPelsHeight
+	unsignedlong	dmDisplayFlags
+	unsignedlong	dmDisplayFrequency
+	unsignedlong	dmICMMethod
+	unsignedlong	dmICMIntent
+	unsignedlong	dmMediaType
+	unsignedlong	dmDitherType
+	unsignedlong	dmReserved1
+	unsignedlong	dmReserved2
+end type
+

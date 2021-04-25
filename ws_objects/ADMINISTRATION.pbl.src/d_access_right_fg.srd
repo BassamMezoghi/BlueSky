@@ -1,0 +1,13 @@
+﻿$PBExportHeader$d_access_right_fg.srd
+release 8;
+datawindow(units=0 timer_interval=0 color=1073741824 processing=1 HTMLDW=no print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 96 print.margin.bottom = 96 print.paper.source = 0 print.paper.size = 0 print.prompt=no print.buttons=no print.preview.buttons=no grid.lines=0 )
+summary(height=0 color="536870912" )
+footer(height=0 color="536870912" )
+detail(height=92 color="536870912" )
+table(column=(type=long update=yes updatewhereclause=yes key=yes name=user_no dbname="ACCESS_RIGHT_CD.USER_NO" )
+ column=(type=long update=yes updatewhereclause=yes key=yes name=acid dbname="ACCESS_RIGHT_CD.ACID" )
+ column=(type=char(1) updatewhereclause=yes name=visible_fg dbname="ACCESS_RIGHT_CD.VISIBLE_FG" )
+ retrieve="PBSELECT( VERSION(400) TABLE(NAME=~"ACCESS_RIGHT_CD~" ) COLUMN(NAME=~"ACCESS_RIGHT_CD.USER_NO~") COLUMN(NAME=~"ACCESS_RIGHT_CD.ACID~") COLUMN(NAME=~"ACCESS_RIGHT_CD.VISIBLE_FG~")WHERE(    EXP1 =~"ACCESS_RIGHT_CD.USER_NO~"   OP =~"=~"    EXP2 =~":user_no~" ) ) ARG(NAME = ~"user_no~" TYPE = number) " update="ACCESS_RIGHT_CD" updatewhere=1 updatekeyinplace=no arguments=(("user_no", number)) )
+column(band=detail id=2 alignment="1" tabsequence=32766 border="0" color="16711680" x="9" y="8" height="76" width="1147" format="[general]" html.valueishtml="0"  name=acid visible="1" righttoleft=1 dddw.name=dddw_access dddw.displaycolumn=title dddw.datacolumn=acid dddw.percentwidth=0 dddw.lines=0 dddw.limit=0 dddw.allowedit=no dddw.useasborder=no dddw.case=any dddw.imemode=0  font.face="Arial (Arabic)" font.height="-12" font.weight="700"  font.family="2" font.pitch="2" font.charset="178" background.mode="1" background.color="536870912" )
+htmltable(border="1" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" netscapelayers="0" )

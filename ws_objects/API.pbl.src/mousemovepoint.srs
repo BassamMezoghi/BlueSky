@@ -1,0 +1,8 @@
+﻿$PBExportHeader$mousemovepoint.srs
+global type mousemovepoint from structure
+	integer		x
+	integer		y
+	unsignedlong		time
+	unsignedlong		dwExtraInfo
+end type
+

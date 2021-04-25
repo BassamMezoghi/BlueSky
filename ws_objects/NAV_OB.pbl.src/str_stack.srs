@@ -1,0 +1,11 @@
+﻿$PBExportHeader$str_stack.srs
+global type str_stack from structure
+	string		as_data
+	string		as_parent
+	string		as_title
+	long		al_handle
+	string		as_type
+	unsignedinteger		ai_pic
+	string		as_account_code
+end type
+

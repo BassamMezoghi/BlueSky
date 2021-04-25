@@ -1,0 +1,9 @@
+﻿$PBExportHeader$rasconnstatus.srs
+global type rasconnstatus from structure
+	unsignedlong		dwsize
+	integer		rasconnstate
+	unsignedlong		dwerror
+	character		szdevicetype[17]
+	character		szdevicename[129]
+end type
+

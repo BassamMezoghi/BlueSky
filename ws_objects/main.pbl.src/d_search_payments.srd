@@ -1,0 +1,89 @@
+﻿$PBExportHeader$d_search_payments.srd
+release 12.5;
+datawindow(units=0 timer_interval=0 color=1073741824 brushmode=0 transparency=0 gradient.angle=0 gradient.color=8421504 gradient.focus=0 gradient.repetition.count=0 gradient.repetition.length=100 gradient.repetition.mode=0 gradient.scale=100 gradient.spread=100 gradient.transparency=0 picture.blur=0 picture.clip.bottom=0 picture.clip.left=0 picture.clip.right=0 picture.clip.top=0 picture.mode=0 picture.scale.x=100 picture.scale.y=100 picture.transparency=0 processing=1 HTMLDW=no print.printername="" print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 96 print.margin.bottom = 96 print.paper.source = 0 print.paper.size = 0 print.canusedefaultprinter=yes print.prompt=no print.buttons=no print.preview.buttons=no print.cliptext=no print.overrideprintjob=no print.collate=yes print.background=no print.preview.background=no print.preview.outline=yes hidegrayline=no showbackcoloronxp=no picture.file="" grid.lines=0 )
+header(height=96 color="536870912" transparency="0" gradient.color="8421504" gradient.transparency="0" gradient.angle="0" brushmode="0" gradient.repetition.mode="0" gradient.repetition.count="0" gradient.repetition.length="100" gradient.focus="0" gradient.scale="100" gradient.spread="100" )
+summary(height=0 color="536870912" transparency="0" gradient.color="8421504" gradient.transparency="0" gradient.angle="0" brushmode="0" gradient.repetition.mode="0" gradient.repetition.count="0" gradient.repetition.length="100" gradient.focus="0" gradient.scale="100" gradient.spread="100" )
+footer(height=136 color="536870912" transparency="0" gradient.color="8421504" gradient.transparency="0" gradient.angle="0" brushmode="0" gradient.repetition.mode="0" gradient.repetition.count="0" gradient.repetition.length="100" gradient.focus="0" gradient.scale="100" gradient.spread="100" )
+detail(height=96 color="536870912" transparency="0" gradient.color="8421504" gradient.transparency="0" gradient.angle="0" brushmode="0" gradient.repetition.mode="0" gradient.repetition.count="0" gradient.repetition.length="100" gradient.focus="0" gradient.scale="100" gradient.spread="100" )
+table(column=(type=datetime update=yes updatewhereclause=yes name=modified_dt dbname="PAYMENTS.MODIFIED_DT" dbalias=".MODIFIED_DT" )
+ column=(type=char(10) update=yes updatewhereclause=yes name=modified_by dbname="PAYMENTS.MODIFIED_BY" dbalias=".MODIFIED_BY" )
+ column=(type=datetime update=yes updatewhereclause=yes name=created_dt dbname="PAYMENTS.CREATED_DT" dbalias=".CREATED_DT" )
+ column=(type=char(10) update=yes updatewhereclause=yes name=created_by dbname="PAYMENTS.CREATED_BY" dbalias=".CREATED_BY" )
+ column=(type=char(1) update=yes updatewhereclause=yes name=active_fg dbname="PAYMENTS.ACTIVE_FG" dbalias=".ACTIVE_FG" )
+ column=(type=char(1) update=yes updatewhereclause=yes name=post_fg dbname="PAYMENTS.POST_FG" dbalias=".POST_FG" )
+ column=(type=long update=yes updatewhereclause=yes name=type_id dbname="PAYMENTS.TYPE_ID" dbalias=".TYPE_ID" )
+ column=(type=char(100) update=yes updatewhereclause=yes name=bank_nm dbname="PAYMENTS.BANK_NM" dbalias=".BANK_NM" )
+ column=(type=char(20) update=yes updatewhereclause=yes name=bond dbname="PAYMENTS.BOND" dbalias=".BOND" )
+ column=(type=decimal(4) update=yes updatewhereclause=yes name=amount dbname="PAYMENTS.AMOUNT" dbalias=".AMOUNT" )
+ column=(type=long update=yes updatewhereclause=yes name=bank_id dbname="PAYMENTS.BANK_ID" dbalias=".BANK_ID" )
+ column=(type=datetime update=yes updatewhereclause=yes name=payment_dt dbname="PAYMENTS.PAYMENT_DT" dbalias=".PAYMENT_DT" )
+ column=(type=char(10) update=yes updatewhereclause=yes name=cid dbname="PAYMENTS.CID" dbalias=".CID" )
+ column=(type=char(10) update=yes updatewhereclause=yes key=yes name=id dbname="PAYMENTS.ID" dbalias=".ID" )
+ column=(type=long update=yes updatewhereclause=yes name=sid dbname="PAYMENTS.SID" dbalias=".SID" )
+ column=(type=long update=yes updatewhereclause=yes name=shars dbname="PAYMENTS.SHARS" dbalias=".SHARS" )
+ column=(type=decimal(4) update=yes updatewhereclause=yes name=price dbname="PAYMENTS.PRICE" dbalias=".PRICE" )
+ column=(type=long updatewhereclause=yes name=account dbname="Account" )
+ column=(type=long update=yes updatewhereclause=yes name=from_bank_id dbname="PAYMENTS.FROM_BANK_ID" dbalias=".FROM_BANK_ID" )
+ column=(type=char(1) update=yes updatewhereclause=yes name=rep_fg dbname="PAYMENTS.REP_FG" dbalias=".REP_FG" )
+ column=(type=char(100) update=yes updatewhereclause=yes name=rep_name dbname="PAYMENTS.REP_NAME" dbalias=".REP_NAME" )
+ column=(type=char(1) updatewhereclause=yes name=shid dbname="SHID" )
+ column=(type=char(1) update=yes updatewhereclause=yes name=salary_fg dbname="PAYMENTS.SALARY_FG" dbalias=".SALARY_FG" )
+ column=(type=char(1) update=yes updatewhereclause=yes name=trading_fg dbname="PAYMENTS.TRADING_FG" dbalias=".TRADING_FG" )
+ column=(type=char(1) update=yes updatewhereclause=yes name=savings_fg dbname="PAYMENTS.SAVINGS_FG" dbalias=".SAVINGS_FG" )
+ column=(type=char(1) update=yes updatewhereclause=yes name=investment_fg dbname="PAYMENTS.INVESTMENT_FG" dbalias=".INVESTMENT_FG" )
+ column=(type=char(1) update=yes updatewhereclause=yes name=heritage_fg dbname="PAYMENTS.HERITAGE_FG" dbalias=".HERITAGE_FG" )
+ column=(type=char(200) update=yes updatewhereclause=yes name=other dbname="PAYMENTS.OTHER" dbalias=".OTHER" )
+ column=(type=long updatewhereclause=yes name=availableshares dbname="AvailableShares" )
+ retrieve="  SELECT PAYMENTS.MODIFIED_DT,   
+         PAYMENTS.MODIFIED_BY,   
+         PAYMENTS.CREATED_DT,   
+         PAYMENTS.CREATED_BY,   
+         PAYMENTS.ACTIVE_FG,   
+         PAYMENTS.POST_FG,   
+         PAYMENTS.TYPE_ID,   
+         PAYMENTS.BANK_NM,   
+         PAYMENTS.BOND,   
+         PAYMENTS.AMOUNT,   
+         PAYMENTS.BANK_ID,   
+         PAYMENTS.PAYMENT_DT,   
+         PAYMENTS.CID,   
+         PAYMENTS.ID,   
+         PAYMENTS.SID ,
+			PAYMENTS.SHARS,
+			PAYMENTS.PRICE,
+			dbo.fnAccount(PAYMENTS.CID) as Account,
+			FROM_BANK_ID,
+			REP_FG,
+			REP_NAME,
+			'' as SHID
+ 		,PAYMENTS.[SALARY_FG]
+      ,PAYMENTS.[TRADING_FG]
+      ,PAYMENTS.[SAVINGS_FG]
+      ,PAYMENTS.[INVESTMENT_FG]
+      ,PAYMENTS.[HERITAGE_FG]
+      ,PAYMENTS.[OTHER]
+		,dbo.fnOverallAccount() as AvailableShares
+    FROM PAYMENTS
+WHERE PAYMENTS.PRICE = 20.650  
+" update="PAYMENTS" updatewhere=0 updatekeyinplace=yes )
+text(band=header alignment="2" text="تاريخ السداد" border="6" color="8388608" x="18" y="8" height="80" width="448" html.valueishtml="0"  name=payment_dt_t visible="1"  font.face="Arial" font.height="-12" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+text(band=header alignment="2" text="اسم المكتتب" border="6" color="8388608" x="480" y="8" height="80" width="1083" html.valueishtml="0"  name=cid_t visible="1"  font.face="Arial" font.height="-12" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+text(band=header alignment="2" text="الرقم الالي" border="6" color="8388608" x="1577" y="8" height="80" width="302" html.valueishtml="0"  name=id_t visible="1"  font.face="Arial" font.height="-12" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+text(band=header alignment="2" text="ر.ت" border="6" color="8388608" x="1888" y="8" height="80" width="178" html.valueishtml="0"  name=t_1 visible="1"  font.face="Arial" font.height="-12" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+column(band=detail id=12 alignment="2" tabsequence=32766 border="0" color="8388608" x="18" y="8" height="76" width="448" format="dd/mm/yyyy" html.valueishtml="0"  name=payment_dt visible="1" edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-11" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+column(band=detail id=13 alignment="1" tabsequence=32766 border="0" color="8388608" x="480" y="8" height="76" width="1083" format="[general]" html.valueishtml="0"  name=cid visible="1" righttoleft=1 dddw.name=dddw_clients dddw.displaycolumn=title dddw.datacolumn=id dddw.percentwidth=0 dddw.lines=0 dddw.limit=0 dddw.allowedit=no dddw.useasborder=no dddw.case=any  font.face="Arial" font.height="-11" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+column(band=detail id=14 alignment="2" tabsequence=32766 border="0" color="8388608" x="1577" y="8" height="76" width="302" format="[general]" html.valueishtml="0"  name=id visible="1" edit.limit=10 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-11" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+compute(band=detail alignment="2" expression="getrow()"border="6" color="8388608" x="1888" y="8" height="80" width="178" format="[GENERAL]" html.valueishtml="0"  name=compute_1 visible="1"  font.face="Arial" font.height="-11" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+button(band=footer text="" filename="C:\Applications\icons\hot\png\24x24\Find.png" enabled=yes originalsize=yes action="0" border="0" color="33554432" x="1883" y="4" height="116" width="133" vtextalign="0" htextalign="0"  name=b_search visible="1"  font.face="Calibri" font.height="-11" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+button(band=footer text="" filename="C:\Applications\icons\hot\png\24x24\New file.png" enabled=yes originalsize=yes action="0" border="0" color="33554432" x="1737" y="4" height="116" width="133" vtextalign="0" htextalign="0"  name=b_new visible="1"  font.face="Calibri" font.height="-11" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+htmltable(border="1" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" encodeselflinkargs="1" netscapelayers="0" pagingmethod=0 generatedddwframes="1" )
+xhtmlgen() cssgen(sessionspecific="0" )
+xmlgen(inline="0" )
+xsltgen()
+jsgen()
+export.xml(headgroups="1" includewhitespace="0" metadatatype=0 savemetadata=0  template=(comment="" encoding="UTF-16LE" name="xml" xml="<?xml version=~"1.0~" encoding=~"UTF-16LE~" standalone=~"no~"?><untitled><untitled_row __pbband=~"detail~"><modified_dt/><modified_by/><created_dt/><created_by/><active_fg/><post_fg/><type_id/><bank_nm/><bond/><amount/><bank_id/><payment_dt>payment_dt</payment_dt><cid>cid</cid><id>id</id></untitled_row></untitled>"))
+import.xml()
+export.pdf(method=0 distill.custompostscript="0" xslfop.print="0" )
+export.xhtml()
+ 

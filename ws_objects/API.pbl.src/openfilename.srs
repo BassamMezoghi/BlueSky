@@ -1,0 +1,24 @@
+﻿$PBExportHeader$openfilename.srs
+global type openfilename from structure
+	unsignedlong		lstructsize
+	unsignedlong		hwdowner
+	unsignedlong		hinstance
+	blob		lpstrfilter
+	string		lpstrcustomfilter
+	unsignedlong		nmaxcustfilter
+	unsignedlong		nfilterindex
+	blob		lpstrfile
+	unsignedlong		nmaxfile
+	blob		lpstrfiletitle
+	unsignedlong		nmaxfiletitle
+	string		lpstrinitialdir
+	string		lpstrtitle
+	unsignedlong		flags
+	unsignedinteger		nfileoffset
+	unsignedinteger		nfileextension
+	string		lpstrdefext
+	unsignedlong		lcustdata
+	unsignedlong		lpfnhook
+	string		lptemplatename
+end type
+

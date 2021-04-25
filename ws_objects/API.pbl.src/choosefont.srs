@@ -1,0 +1,20 @@
+﻿$PBExportHeader$choosefont.srs
+global type choosefont from structure
+	unsignedlong		lstructsize
+	unsignedlong		hwndowner
+	unsignedlong		hdc
+	unsignedlong		lplogfont
+	unsignedlong		ipointsize
+	unsignedlong		flags
+	unsignedlong		rgbcolors
+	unsignedlong		lcustdata
+	unsignedlong		lpfnhook
+	string		lptemplatename
+	unsignedlong		hinstance
+	string		lpszstyle
+	unsignedinteger		nfonttype
+	unsignedinteger		missing_alignment
+	long		nsizemin
+	long		nsizemax
+end type
+

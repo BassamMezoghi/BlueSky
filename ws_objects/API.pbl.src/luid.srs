@@ -1,0 +1,6 @@
+﻿$PBExportHeader$luid.srs
+global type luid from structure
+	unsignedlong		lowpart
+	unsignedlong		highpart
+end type
+

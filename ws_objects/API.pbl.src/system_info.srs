@@ -1,0 +1,15 @@
+﻿$PBExportHeader$system_info.srs
+global type SYSTEM_INFO from structure
+	long		wProcessorArchitecture
+	long		wReserved
+	ulong		dwPageSize
+	ulong		lpMinimumApplicationAddress
+	ulong		lpMaximumApplicationAddress
+	ulong		dwActiveProcessorMask
+	ulong		dwNumberOfProcessors
+	ulong		dwProcessorType
+	ulong		dwAllocationGranularity
+	long		wProcessorLevel
+	long		wProcessorRevision
+end type
+

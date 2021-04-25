@@ -1,0 +1,23 @@
+﻿$PBExportHeader$printdlg.srs
+global type printdlg from structure
+	unsignedlong		lstructsize
+	unsignedlong		hwndowner
+	unsignedlong		hdevmode
+	unsignedlong		hdevnames
+	unsignedlong		hdc
+	unsignedlong		flags
+	unsignedinteger		nfrompage
+	unsignedinteger		ntopage
+	unsignedinteger		nminpage
+	unsignedinteger		nmaxpage
+	unsignedinteger		ncopies
+	unsignedlong		hinstance
+	unsignedlong		lcustdata
+	long		lpfnprinthook
+	long		lpfnsetuphook
+	string		lpprinttemplatename
+	string		lpsetuptemplatename
+	unsignedlong		hprinttemplate
+	unsignedlong		hsetuptemplate
+end type
+

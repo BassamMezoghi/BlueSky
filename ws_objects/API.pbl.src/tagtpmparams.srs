@@ -1,0 +1,6 @@
+﻿$PBExportHeader$tagtpmparams.srs
+global type tagtpmparams from structure
+	uint		cbsize
+	tagrect		rcexclude
+end type
+

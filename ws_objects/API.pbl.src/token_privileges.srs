@@ -1,0 +1,6 @@
+﻿$PBExportHeader$token_privileges.srs
+global type token_privileges from structure
+	unsignedlong		privilegecount
+	luid_and_attributes		privileges[]
+end type
+

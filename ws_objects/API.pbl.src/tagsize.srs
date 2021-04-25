@@ -1,0 +1,6 @@
+﻿$PBExportHeader$tagsize.srs
+global type tagsize from structure
+	long		cx
+	long		cy
+end type
+

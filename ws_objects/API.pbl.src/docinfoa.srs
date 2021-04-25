@@ -1,0 +1,9 @@
+﻿$PBExportHeader$docinfoa.srs
+global type docinfoa from structure
+	integer		cbsize
+	string		lpszdocname
+	string		lpszoutput
+	string		lpszdatatype
+	unsignedlong		fwtype
+end type
+

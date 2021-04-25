@@ -1,0 +1,20 @@
+﻿$PBExportHeader$of_convertnumbertotext.srf
+global type of_convertnumbertotext from function_object
+end type
+
+forward prototypes
+global function string of_convertnumbertotext (decimal ld_total_)
+end prototypes
+
+global function string of_convertnumbertotext (decimal ld_total_);String ls_total_in_letter
+
+IF ld_total_ <= 0 or IsNull(ld_total_) THEN Return "" 
+
+//IF gstr_user_info.Maincurrency = "" THEN
+	ls_total_in_letter = " فقط "+gnv_services.pre_convert(ld_total_,"دينار","درهم",3)+" لا غير "
+//ELSE
+//	ls_total_in_letter = gnv_services.pre_convert(ld_total_,Mid(gstr_user_info.Maincurrency , 1 , POS(gstr_user_info.Maincurrency , ",") - 1 ) , Mid(gstr_user_info.Maincurrency , POS(gstr_user_info.Maincurrency , ",") + 1 , len(gstr_user_info.Maincurrency) ) ,3)
+//END IF
+return ls_total_in_letter
+end function
+

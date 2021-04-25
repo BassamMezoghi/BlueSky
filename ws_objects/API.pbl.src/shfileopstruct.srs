@@ -1,0 +1,12 @@
+﻿$PBExportHeader$shfileopstruct.srs
+global type shfileopstruct from structure
+	long		hwnd
+	unsignedlong		wfunc
+	long		pfrom
+	string		pto
+	unsignedlong		fflags
+	boolean		fanyoperationsaborted
+	long		hnamemappings
+	string		lpszprogresstitle
+end type
+

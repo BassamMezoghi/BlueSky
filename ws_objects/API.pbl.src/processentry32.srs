@@ -1,0 +1,14 @@
+﻿$PBExportHeader$processentry32.srs
+global type PROCESSENTRY32 from structure
+	ulong		dwSize
+	ulong		cntUsage
+	ulong		th32ProcessID
+	ulong		th32DefaultHeapID
+	ulong		th32ModuleID
+	ulong		cntThreads
+	ulong		th32ParentProcessID
+	long		pcPriClassBase
+	ulong		dwFlags
+	character	szExeFile[260]
+end type
+

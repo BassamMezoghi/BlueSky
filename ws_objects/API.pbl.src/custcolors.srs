@@ -1,0 +1,5 @@
+﻿$PBExportHeader$custcolors.srs
+global type custcolors from structure
+	unsignedlong		colors[16]
+end type
+

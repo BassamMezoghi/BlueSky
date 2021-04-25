@@ -1,0 +1,6 @@
+﻿$PBExportHeader$tagpoint.srs
+global type tagPOINT from structure
+	long		x
+	long		y
+end type
+

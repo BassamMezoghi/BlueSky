@@ -1,0 +1,31 @@
+﻿$PBExportHeader$str_user_info.srs
+global type str_user_info from structure
+	string		login_id
+	string		password
+	string		employee_name
+	long		city_id
+	string		position
+	long		id		descriptor "comment" = "user id no."
+	string		office_id
+	string		branch_nm
+	boolean		users
+	boolean		online
+	boolean		admin
+	integer		application_parm[]
+	integer		l_account_period
+	boolean		hq
+	string		db_nm
+	string		dbid
+	boolean		restor_status
+	datetime		start_dt
+	datetime		end_dt
+	string		computer_name
+	string		hdd_serial_no
+	string		ip
+	string		teamviewer
+	long		dealer_id
+	long		emid
+	long		user_fid[]		descriptor "comment" = "user familylist"
+	string		MainCurrency
+end type
+

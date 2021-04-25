@@ -1,0 +1,6 @@
+﻿$PBExportHeader$str_menu.srs
+global type str_menu from structure
+	menu		mnu
+	boolean		override
+end type
+

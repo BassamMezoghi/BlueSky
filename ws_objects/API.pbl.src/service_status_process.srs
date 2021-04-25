@@ -1,0 +1,13 @@
+﻿$PBExportHeader$service_status_process.srs
+global type service_status_process from structure
+	unsignedlong		dwservicetype
+	unsignedlong		dwcurrentstate
+	unsignedlong		dwcontrolsaccepted
+	unsignedlong		dwwin32exitcode
+	unsignedlong		dwservicespecificexitcode
+	unsignedlong		dwcheckpoint
+	unsignedlong		dwwaithint
+	unsignedlong		dwprocessid
+	unsignedlong		dwserviceflags
+end type
+

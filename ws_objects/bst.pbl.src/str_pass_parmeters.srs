@@ -1,0 +1,13 @@
+﻿$PBExportHeader$str_pass_parmeters.srs
+global type str_pass_parmeters from structure
+	long		long_array[]
+	string		string_parm[]
+	datetime		datetime_array[]
+	decimal { 3 }		decimal_array[]
+	boolean		b_parm[]
+	long		long_parm[]
+	str_filter_report		str_array[]
+	datastore		ds
+	str_order_details		OrderItems[]
+end type
+

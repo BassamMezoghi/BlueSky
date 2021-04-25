@@ -1,0 +1,12 @@
+﻿$PBExportHeader$memorystatus.srs
+global type MEMORYSTATUS from structure
+	ulong		dwLength
+	ulong		dwMemoryLoad
+	ulong		dwTotalPhys
+	ulong		dwAvailPhys
+	ulong		dwTotalPageFile
+	ulong		dwAvailPageFile
+	ulong		dwTotalVirtual
+	ulong		dwAvailVirtual
+end type
+

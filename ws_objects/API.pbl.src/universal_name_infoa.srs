@@ -1,0 +1,5 @@
+﻿$PBExportHeader$universal_name_infoa.srs
+global type UNIVERSAL_NAME_INFOA from structure
+	string		UniversalName
+end type
+

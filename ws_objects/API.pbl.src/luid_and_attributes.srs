@@ -1,0 +1,6 @@
+﻿$PBExportHeader$luid_and_attributes.srs
+global type luid_and_attributes from structure
+	luid		pluid
+	unsignedlong		attributes
+end type
+

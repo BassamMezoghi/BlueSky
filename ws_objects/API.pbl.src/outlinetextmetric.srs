@@ -1,0 +1,36 @@
+﻿$PBExportHeader$outlinetextmetric.srs
+global type outlinetextmetric from structure
+	unsignedlong		otmsize
+	textmetrics		otmtextmetrics
+	character		otmfiller
+	panose		otmpanosenumber
+	unsignedlong		otmfsselection
+	unsignedlong		otmfstype
+	long		otmscharsloperise
+	long		otmscharsloperun
+	long		otmitalicangle
+	unsignedlong		otmemsquare
+	long		otmascent
+	long		otmdescent
+	unsignedlong		otmlinegap
+	unsignedlong		otmscapemheight
+	unsignedlong		otmsxheight
+	tagrect		otmrcfontbox
+	long		otmmacascent
+	long		otmmacdescent
+	unsignedlong		otmmaclinegap
+	unsignedlong		otmusminimumppem
+	tagpoint		otmptsubscriptsize
+	tagpoint		otmptsubscriptoffset
+	tagpoint		otmptsuperscriptsize
+	tagpoint		otmptsuperscriptoffset
+	unsignedlong		otmsstrikeoutsize
+	long		otmsstrikeoutposition
+	long		otmsunderscoresize
+	long		otmsunderscoreposition
+	unsignedlong		otmpfamilyname
+	unsignedlong		otmpfacename
+	unsignedlong		otmpstylename
+	unsignedlong		otmpfullname
+end type
+

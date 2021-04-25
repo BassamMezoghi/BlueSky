@@ -1,0 +1,8 @@
+﻿$PBExportHeader$rasdialextensions.srs
+global type rasdialextensions from structure
+	unsignedlong		dwsize
+	unsignedlong		dwfoptions
+	unsignedlong		hwndparent
+	unsignedlong		reserved
+end type
+

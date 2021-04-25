@@ -1,0 +1,6 @@
+﻿$PBExportHeader$str_objects.srs
+global type str_objects from structure
+	string		Obj
+	long		Tag
+end type
+

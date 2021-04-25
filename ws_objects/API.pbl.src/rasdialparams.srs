@@ -1,0 +1,13 @@
+﻿$PBExportHeader$rasdialparams.srs
+global type rasdialparams from structure
+	unsignedlong		dwsize
+	character		szentryname[257]
+	character		szphonenumber[129]
+	character		szcallbacknumber[129]
+	character		szusername[257]
+	character		szpassword[257]
+	character		szdomain[16]
+	unsignedlong		dwsubentry
+	unsignedlong		dwcallbackid
+end type
+

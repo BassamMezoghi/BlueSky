@@ -1,0 +1,12 @@
+﻿$PBExportHeader$systemtime.srs
+global type SYSTEMTIME from structure
+	uint		wYear
+	uint		wMonth
+	uint		wDayOfWeek
+	uint		wDay
+	uint		wHour
+	uint		wMinute
+	uint		wSecond
+	uint		wMilliseconds
+end type
+

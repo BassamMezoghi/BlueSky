@@ -1,0 +1,39 @@
+﻿$PBExportHeader$d_q_menu.srd
+release 12.5;
+datawindow(units=0 timer_interval=0 color=16777215 brushmode=2 transparency=0 gradient.angle=0 gradient.color=15780518 gradient.focus=0 gradient.repetition.count=0 gradient.repetition.length=100 gradient.repetition.mode=0 gradient.scale=100 gradient.spread=100 gradient.transparency=0 picture.blur=0 picture.clip.bottom=0 picture.clip.left=0 picture.clip.right=0 picture.clip.top=0 picture.mode=0 picture.scale.x=100 picture.scale.y=100 picture.transparency=0 processing=0 HTMLDW=no print.printername="" print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 96 print.margin.bottom = 96 print.paper.source = 0 print.paper.size = 0 print.canusedefaultprinter=yes print.prompt=no print.buttons=no print.preview.buttons=no print.cliptext=no print.overrideprintjob=no print.collate=yes print.background=no print.preview.background=no print.preview.outline=yes hidegrayline=no showbackcoloronxp=no picture.file="" )
+header(height=0 color="536870912" transparency="0" gradient.color="8421504" gradient.transparency="0" gradient.angle="0" brushmode="0" gradient.repetition.mode="0" gradient.repetition.count="0" gradient.repetition.length="100" gradient.focus="0" gradient.scale="100" gradient.spread="100" )
+summary(height=0 color="536870912" transparency="0" gradient.color="8421504" gradient.transparency="0" gradient.angle="0" brushmode="0" gradient.repetition.mode="0" gradient.repetition.count="0" gradient.repetition.length="100" gradient.focus="0" gradient.scale="100" gradient.spread="100" )
+footer(height=0 color="536870912" transparency="0" gradient.color="8421504" gradient.transparency="0" gradient.angle="0" brushmode="0" gradient.repetition.mode="0" gradient.repetition.count="0" gradient.repetition.length="100" gradient.focus="0" gradient.scale="100" gradient.spread="100" )
+detail(height=108 color="536870912" transparency="0" gradient.color="8421504" gradient.transparency="0" gradient.angle="0" brushmode="0" gradient.repetition.mode="0" gradient.repetition.count="0" gradient.repetition.length="100" gradient.focus="0" gradient.scale="100" gradient.spread="100" )
+table(column=(type=long updatewhereclause=yes name=user_no dbname="USER_NO" )
+ column=(type=char(108) updatewhereclause=yes name=title dbname="TITLE" )
+ column=(type=char(200) updatewhereclause=yes name=object_nm dbname="Object_nm" )
+ column=(type=long updatewhereclause=yes name=aid dbname="AID" )
+ column=(type=long updatewhereclause=yes name=acid dbname="ACID" )
+ retrieve="SELECT 	USER_MENU.USER_NO,   
+         		CASE  
+				WHEN T.TITLE is null THEN ACCESS_CD.TITLE+' :: ' + CAST(ACCESS_CD.ACID as varchar(5))
+				WHEN T.TITLE is not null THEN T.TITLE +' :: ' + CAST( ACCESS_CD.ACID as varchar(5))
+				END as TITLE,
+				ACCESS_CD.Object_nm,
+				USER_MENU.AID,
+				ACCESS_CD.ACID
+    FROM USER_MENU 
+				inner join 
+			  ACCESS_CD   on (USER_MENU.AID = ACCESS_CD.ACID)
+				left join
+				(SELECT substring(ID , 3,len(ID)) as ID , TITLE FROM MENU_LAN where substring(ID , 1,2) = :lan ) T on (ACCESS_CD.ACID = T.ID)
+	WHERE USER_MENU.USER_NO = :UID
+" arguments=(("UID", number),("lan", string)) )
+column(band=detail id=2 alignment="0" tabsequence=32766 border="6" color="8388608" x="9" y="4" height="100" width="1385" format="  [General]  " html.valueishtml="0"  name=title visible="1" righttoleft=1 edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no  font.face="Arial" font.height="-14" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="16777215" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="1" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="50" background.gradient.scale="63" background.gradient.spread="50" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="1" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="1" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.tip="~t title " tooltip.transparency="0" transparency="0" )
+htmltable(border="1" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" encodeselflinkargs="1" netscapelayers="0" pagingmethod=0 generatedddwframes="1" )
+xhtmlgen() cssgen(sessionspecific="0" )
+xmlgen(inline="0" )
+xsltgen()
+jsgen()
+export.xml(headgroups="1" includewhitespace="0" metadatatype=0 savemetadata=0  template=(comment="" encoding="UTF-16LE" name="xml" xml="<?xml version=~"1.0~" encoding=~"UTF-16LE~" standalone=~"no~"?><d_q_menu><d_q_menu_row __pbband=~"detail~"><user_no>user_no</user_no><title/><object_nm/><aid/><edit/></d_q_menu_row></d_q_menu>"))
+import.xml()
+export.pdf(method=0 distill.custompostscript="0" xslfop.print="0" )
+export.xhtml()
+ 

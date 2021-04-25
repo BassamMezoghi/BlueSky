@@ -1,0 +1,18 @@
+﻿$PBExportHeader$logfont.srs
+global type logfont from structure
+	long		lfheight
+	long		lfwidth
+	long		lfescapement
+	long		lforientation
+	long		lfweight
+	character		lfitalic
+	character		lfunderline
+	character		lfstrikeout
+	character		lfcharset
+	character		lfoutprecision
+	character		lfclipprecision
+	character		lfquality
+	character		lfpitchandfamily
+	character		lffacename[32]
+end type
+

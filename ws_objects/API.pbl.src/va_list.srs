@@ -1,0 +1,6 @@
+﻿$PBExportHeader$va_list.srs
+global type va_list from structure
+	string		a0
+	integer		offset
+end type
+

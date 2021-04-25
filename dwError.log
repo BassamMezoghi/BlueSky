@@ -1,0 +1,88 @@
+25/01/2019 15:39:57 PC:PC-MARS
+25/01/2019 15:39:57 USER:support
+25/01/2019 15:39:57 A database error has occurred.
+Database error code:  0
+Database error message:
+Select Error: Column lists do not match.
+25/01/2019 15:43:05 PC:PC-MARS
+25/01/2019 15:43:06 USER:support
+25/01/2019 15:43:06 A database error has occurred.
+Database error code:  0
+Database error message:
+Select Error: Column lists do not match.
+25/01/2019 15:44:10 PC:PC-MARS
+25/01/2019 15:44:10 USER:support
+25/01/2019 15:44:10 A database error has occurred.
+Database error code:  0
+Database error message:
+Select Error: Column lists do not match.
+25/01/2019 15:45:52 PC:PC-MARS
+25/01/2019 15:45:52 USER:support
+25/01/2019 15:45:52 A database error has occurred.
+Database error code:  0
+Database error message:
+Select Error: Column lists do not match.
+25/01/2019 15:50:42 PC:PC-MARS
+25/01/2019 15:50:42 USER:support
+25/01/2019 15:50:42 A database error has occurred.
+Database error code:  0
+Database error message:
+Select Error: Column lists do not match.
+25/01/2019 15:51:02 PC:PC-MARS
+25/01/2019 15:51:02 USER:support
+25/01/2019 15:51:02 A database error has occurred.
+Database error code:  0
+Database error message:
+Select Error: Column lists do not match.
+25/01/2019 15:51:41 PC:PC-MARS
+25/01/2019 15:51:42 USER:support
+25/01/2019 15:51:42 A database error has occurred.
+Database error code:  0
+Database error message:
+Select Error: Column lists do not match.
+25/01/2019 15:52:03 PC:PC-MARS
+25/01/2019 15:52:03 USER:support
+25/01/2019 15:52:03 A database error has occurred.
+Database error code:  0
+Database error message:
+Select Error: Column lists do not match.
+25/01/2019 15:52:28 PC:PC-MARS
+25/01/2019 15:52:28 USER:support
+25/01/2019 15:52:28 A database error has occurred.
+Database error code:  0
+Database error message:
+Select Error: Column lists do not match.
+25/01/2019 15:56:25 PC:PC-MARS
+25/01/2019 15:56:25 USER:support
+25/01/2019 15:56:25 A database error has occurred.
+Database error code:  0
+Database error message:
+Select Error: Column lists do not match.
+15/02/2019 15:20:02 PC:PC-MARS
+15/02/2019 15:20:02 USER:support
+15/02/2019 15:20:02 A database error has occurred.
+Database error code:  547
+Database error message:
+SQLSTATE = 23000
+Microsoft SQL Server Native Client 11.0
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_PAYMENTS_SERVICE_CD". The conflict occurred in database "SHMS", table "dbo.SERVICE_CD", column 'ID'.
+
+No changes made to database.
+
+INSERT INTO PAYMENTS ( MODIFIED_DT, MODIFIED_BY, CREATED_DT, CREATED_BY, ACTIVE_FG, POST_FG, TYPE_ID, BANK_ID, PAYMENT_DT, CID, ID, SID, SHARS, PRICE, REP_FG, SALARY_FG ) VALUES ( {ts '2019-02-15 15:19:49.057'}, 'support', {ts '2019-02-15 15:19:12.053'}, 'support', 'Y', 'N', 1, 1, {ts '2019-02-15 00:00:00.000'}, '5', '1-16', 2, 500000, 30.9750, 'N', 'Y' )
+04/03/2019 17:33:04 PC:PC-MARS
+04/03/2019 17:33:04 USER:support
+04/03/2019 17:33:04 A database error has occurred.
+Database error code:  10794
+Database error message:
+Select Error: SQLSTATE = 42000
+Microsoft SQL Server Native Client 11.0
+The transaction isolation level 'READ UNCOMMITTED' is not supported with memory optimized tables.
+06/04/2019 14:05:35 PC:PC-MARS
+06/04/2019 14:05:35 USER:support
+06/04/2019 14:05:35 A database error has occurred.
+Database error code:  10794
+Database error message:
+Select Error: SQLSTATE = 42000
+Microsoft SQL Server Native Client 11.0
+The transaction isolation level 'READ UNCOMMITTED' is not supported with memory optimized tables.

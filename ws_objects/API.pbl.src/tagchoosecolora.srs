@@ -1,0 +1,13 @@
+﻿$PBExportHeader$tagchoosecolora.srs
+global type tagchoosecolora from structure
+	ulong		lStructSize
+	ulong		hwndOwner
+	ulong		hInstance
+	ulong		rgbResult
+	ulong		lpCustColors
+	ulong		Flags
+	ulong		lCustData
+	ulong		lpfnHook
+	ulong		lpTemplateName
+end type
+
